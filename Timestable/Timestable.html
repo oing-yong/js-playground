@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(10%, auto));
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="title">구구단을 외자</h1>
+  <div id="container" class="container"></div>
+  <script>
+    var a ='';
+    let container = document.getElementById("container");
+
+    for (var i = 2; i <= 9; i++) {
+      for (var m = 1; m <= 9; m++) {
+        console.log(i + "*" + m + "=" + (i * m));
+        a += i + "*" + m + "=" + (i * m) + "<br />";
+      }
+      container.innerHTML +='<div class="item">'+a+'</div>';
+      a = '';
+    }
+  </script>
+</body>
+
+</html>
